@@ -1,0 +1,12 @@
+# Claude Code local skill symlinks (point to .agents/ which is not in repo)
+.claude/skills/
+
+# Playwright MCP artefacts
+.playwright-mcp/
+
+# Development screenshots
+*.png
+!screenshot.png
+
+# Skills lock
+skills-lock.json
