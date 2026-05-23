@@ -442,6 +442,12 @@ document.addEventListener('DOMContentLoaded', () => {
         formSuccess.hidden = false;
         form.reset();
         formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        if ('speechSynthesis' in window) {
+          const utter = new SpeechSynthesisUtterance('Hurray! Your form is submitted successfully.');
+          utter.rate = 1;
+          utter.pitch = 1.1;
+          window.speechSynthesis.speak(utter);
+        }
       } else {
         throw new Error('FormSubmit returned failure');
       }
