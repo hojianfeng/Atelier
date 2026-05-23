@@ -53,7 +53,7 @@
   </nav>
 
   <!-- Mobile Menu Overlay -->
-  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+  <div class="mobile-overlay" id="mobileOverlay" role="dialog" aria-modal="true" aria-label="Mobile navigation menu" aria-hidden="true">
     <button class="mobile-close" id="mobileClose" aria-label="Close mobile menu">
       <i class="fas fa-times"></i>
     </button>
@@ -765,6 +765,12 @@
             <a href="#" class="social-link" role="listitem" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
+            <a href="#" class="social-link" role="listitem" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link" role="listitem" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
           </div>
         </div>
 
@@ -792,9 +798,9 @@
         <div class="footer-contact">
           <h4 class="footer-heading">Contact</h4>
           <address style="font-style: normal;">
-            <p><i class="fas fa-map-marker-alt"></i> 12 Rue de Lumière, Paris 75008</p>
-            <p><i class="fas fa-phone-alt"></i> <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:hello@lumiereinteriors.com">hello@lumiereinteriors.com</a></p>
+            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 12 Rue de Lumière, Paris 75008</p>
+            <p><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+            <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:hello@lumiereinteriors.com">hello@lumiereinteriors.com</a></p>
           </address>
         </div>
 

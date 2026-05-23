@@ -132,6 +132,17 @@ Give it a unique `id` matching a `href="#id"` in the navbar. Use `.section-eyebr
 ### New color
 Always add a CSS custom property in `:root` (and a `[data-theme="dark"]` override directly below the component styles — never in the variable block at the top). Never use a hard-coded hex value outside the variable declaration.
 
+## Claude Code Hooks
+
+A project-level PostToolUse hook fires a macOS voice alert whenever Claude submits the enquiry form via Playwright during development/testing:
+
+| File | Purpose |
+|------|---------|
+| `.claude/settings.json` | Registers the hook on `mcp__playwright__browser_fill_form` and `mcp__playwright__browser_click` |
+| `.claude/hooks/form-submitted.sh` | Parses the tool response; calls `say "HURRAY, YOUR FORM IS SUBMITTED SUCCESSFULLY"` on success |
+
+This only triggers when Claude itself submits the form — not for real site visitors.
+
 ## Security Notes
 
 - **No secrets in the repo** — the FormSubmit recipient email is a public-facing contact address, not a credential.
