@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumière Interiors — Award-winning luxury interior design studio crafting timeless residential and commercial spaces that inspire." />
+  <meta name="keywords" content="luxury interior design, residential design, commercial interior, space planning, renovation" />
+  <meta name="author" content="Lumière Interiors" />
+  <meta property="og:title" content="Lumière Interiors — Designing Spaces That Inspire" />
+  <meta property="og:description" content="Award-winning luxury interior design studio." />
+  <meta property="og:type" content="website" />
+  <title>Lumière Interiors — Designing Spaces That Inspire</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+
+  <!-- ═══════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Lumière Interiors Home">
+        <span class="logo-icon">✦</span>
+        <span>Lumière</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="btn btn-nav">Book Consultation</a>
+        <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+    <button class="mobile-close" id="mobileClose" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul class="mobile-links" role="list">
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary mobile-cta">Book Consultation</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════ -->
+  <section id="home" class="hero" aria-label="Hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80"
+        alt="Luxury interior living room"
+        class="hero-img"
+        loading="eager"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content fade-up">
+      <span class="hero-eyebrow">Award-Winning Interior Design Studio</span>
+      <h1 class="hero-headline">
+        Designing Spaces<br />
+        <em>That Inspire</em>
+      </h1>
+      <p class="hero-sub">
+        We craft bespoke residential and commercial interiors that blend timeless elegance
+        with modern sensibility — spaces that tell your story beautifully.
+      </p>
+      <div class="hero-ctas">
+        <a href="#portfolio" class="btn btn-primary">
+          <i class="fas fa-images"></i> View Portfolio
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-calendar-alt"></i> Get Free Consultation
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <!-- Floating Stats Bar -->
+    <div class="hero-stats" aria-label="Key statistics">
+      <div class="hero-stat">
+        <span class="stat-num" data-target="350">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="hero-stat">
+        <span class="stat-num" data-target="12">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="hero-stat">
+        <span class="stat-num" data-target="98">0</span><span class="stat-plus">%</span>
+        <span class="stat-label">Client Satisfaction</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="hero-stat">
+        <span class="stat-num" data-target="24">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Awards Won</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════ -->
+  <section class="about section-pad" id="about" aria-label="About us">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual fade-left">
+          <div class="about-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80"
+              alt="Elegant interior design showcase"
+              loading="lazy"
+            />
+            <div class="about-badge">
+              <span class="badge-num">12</span>
+              <span class="badge-text">Years of<br/>Excellence</span>
+            </div>
+          </div>
+          <div class="about-img-small">
+            <img
+              src="https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=400&q=80"
+              alt="Detail of luxury interior"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="about-text fade-right">
+          <span class="section-eyebrow">About Lumière</span>
+          <h2 class="section-heading">We Transform Spaces Into <em>Living Art</em></h2>
+          <p class="about-desc">
+            Founded in 2012, Lumière Interiors is a boutique design studio dedicated to creating
+            spaces of extraordinary beauty and function. Our team of award-winning designers brings
+            a curated eye, deep craft knowledge, and genuine passion to every project — from
+            intimate apartments to landmark commercial spaces.
+          </p>
+          <p class="about-desc">
+            We believe that a truly great interior doesn't just look beautiful — it feels like home
+            the moment you walk in. Every material, every light source, every piece of furniture
+            is chosen with intention.
+          </p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <i class="fas fa-gem pillar-icon" aria-hidden="true"></i>
+              <span>Timeless Design</span>
+            </div>
+            <div class="pillar">
+              <i class="fas fa-leaf pillar-icon" aria-hidden="true"></i>
+              <span>Sustainable Materials</span>
+            </div>
+            <div class="pillar">
+              <i class="fas fa-drafting-compass pillar-icon" aria-hidden="true"></i>
+              <span>Precision Craft</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">Start Your Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       SERVICES SECTION
+  ═══════════════════════════════════ -->
+  <section class="services section-pad" id="services" aria-label="Our services">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-eyebrow">What We Do</span>
+        <h2 class="section-heading">Our <em>Services</em></h2>
+        <p class="section-sub">
+          From concept to completion, we offer a full suite of interior design services
+          tailored to your vision, lifestyle, and budget.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card fade-up" style="--delay: 0s">
+          <div class="service-icon-wrap">
+            <i class="fas fa-couch" aria-hidden="true"></i>
+          </div>
+          <h3 class="service-title">Residential Design</h3>
+          <p class="service-desc">
+            Bespoke interiors for homes, apartments, and villas — crafted around your
+            lifestyle and personality. From full-home transformations to single-room
+            revamps.
+          </p>
+          <a href="#contact" class="service-link">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card fade-up" style="--delay: 0.1s">
+          <div class="service-icon-wrap">
+            <i class="fas fa-building" aria-hidden="true"></i>
+          </div>
+          <h3 class="service-title">Commercial Interior</h3>
+          <p class="service-desc">
+            Inspiring office spaces, retail environments, hotels, and hospitality venues
+            that strengthen your brand identity and energise the people within them.
+          </p>
+          <a href="#contact" class="service-link">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card fade-up" style="--delay: 0.2s">
+          <div class="service-icon-wrap">
+            <i class="fas fa-ruler-combined" aria-hidden="true"></i>
+          </div>
+          <h3 class="service-title">Space Planning</h3>
+          <p class="service-desc">
+            Maximise every square foot with intelligent spatial layouts. We balance
+            aesthetics with ergonomics so your space flows beautifully and works hard.
+          </p>
+          <a href="#contact" class="service-link">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card fade-up" style="--delay: 0.3s">
+          <div class="service-icon-wrap">
+            <i class="fas fa-hard-hat" aria-hidden="true"></i>
+          </div>
+          <h3 class="service-title">Renovation Consultation</h3>
+          <p class="service-desc">
+            Expert guidance through renovation projects — from planning and material
+            selection to contractor coordination and final styling. On time, on budget.
+          </p>
+          <a href="#contact" class="service-link">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       PORTFOLIO SECTION
+  ═══════════════════════════════════ -->
+  <section class="portfolio section-pad" id="portfolio" aria-label="Portfolio">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-eyebrow">Our Work</span>
+        <h2 class="section-heading">Selected <em>Projects</em></h2>
+        <p class="section-sub">
+          A curated selection of spaces we've had the pleasure of creating.
+          Each project is as unique as its owner.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="portfolio-filters fade-up" role="group" aria-label="Filter portfolio by room type">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="living-room">Living Room</button>
+        <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+        <button class="filter-btn" data-filter="office">Office</button>
+        <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <div class="portfolio-item fade-up" data-category="living-room">
+          <div class="portfolio-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=700&q=80"
+              alt="The Meridian — Luxury living room with warm tones"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-cat">Living Room</span>
+                <h3 class="portfolio-title">The Meridian Residence</h3>
+              </div>
+              <button class="portfolio-zoom" aria-label="View full image">
+                <i class="fas fa-expand-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="bedroom" style="--delay: 0.05s">
+          <div class="portfolio-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=700&q=80"
+              alt="Elara Suite — Serene master bedroom"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-cat">Bedroom</span>
+                <h3 class="portfolio-title">Elara Suite</h3>
+              </div>
+              <button class="portfolio-zoom" aria-label="View full image">
+                <i class="fas fa-expand-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="kitchen" style="--delay: 0.1s">
+          <div class="portfolio-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=700&q=80"
+              alt="Nova Kitchen — Sleek modern kitchen design"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-cat">Kitchen</span>
+                <h3 class="portfolio-title">Nova Culinary Space</h3>
+              </div>
+              <button class="portfolio-zoom" aria-label="View full image">
+                <i class="fas fa-expand-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="office" style="--delay: 0.15s">
+          <div class="portfolio-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80"
+              alt="Apex Studio — Modern open plan office"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-cat">Office</span>
+                <h3 class="portfolio-title">Apex Creative Studio</h3>
+              </div>
+              <button class="portfolio-zoom" aria-label="View full image">
+                <i class="fas fa-expand-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="living-room" style="--delay: 0.2s">
+          <div class="portfolio-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80"
+              alt="Soleil Villa — Bright open living room"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-cat">Living Room</span>
+                <h3 class="portfolio-title">Soleil Villa</h3>
+              </div>
+              <button class="portfolio-zoom" aria-label="View full image">
+                <i class="fas fa-expand-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="bedroom" style="--delay: 0.25s">
+          <div class="portfolio-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80"
+              alt="Zen Retreat — Minimalist bedroom design"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-cat">Bedroom</span>
+                <h3 class="portfolio-title">Zen Retreat</h3>
+              </div>
+              <button class="portfolio-zoom" aria-label="View full image">
+                <i class="fas fa-expand-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="kitchen" style="--delay: 0.3s">
+          <div class="portfolio-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?auto=format&fit=crop&w=700&q=80"
+              alt="The Grove Kitchen — Warm wood and marble"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-cat">Kitchen</span>
+                <h3 class="portfolio-title">The Grove Kitchen</h3>
+              </div>
+              <button class="portfolio-zoom" aria-label="View full image">
+                <i class="fas fa-expand-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-up" data-category="office" style="--delay: 0.35s">
+          <div class="portfolio-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=700&q=80"
+              alt="Loft HQ — Industrial chic office space"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-cat">Office</span>
+                <h3 class="portfolio-title">Loft HQ</h3>
+              </div>
+              <button class="portfolio-zoom" aria-label="View full image">
+                <i class="fas fa-expand-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       TESTIMONIALS SECTION
+  ═══════════════════════════════════ -->
+  <section class="testimonials section-pad" id="testimonials" aria-label="Client testimonials">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-eyebrow">Kind Words</span>
+        <h2 class="section-heading">What Our <em>Clients Say</em></h2>
+      </div>
+
+      <div class="testimonials-slider fade-up" aria-live="polite">
+        <div class="testimonials-track" id="testimonialsTrack">
+
+          <div class="testimonial-card" role="article">
+            <div class="testimonial-quote-icon" aria-hidden="true">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              "Lumière transformed our apartment beyond anything we imagined. The team
+              listened to every detail, suggested ideas we never would have thought of,
+              and delivered a space that genuinely feels like us — only more beautiful."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80"
+                alt="Portrait of Sophia Renault"
+                loading="lazy"
+              />
+              <div>
+                <span class="author-name">Sophia Renault</span>
+                <span class="author-role">Residential Client, Paris</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="testimonial-card" role="article">
+            <div class="testimonial-quote-icon" aria-hidden="true">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              "Our new office has completely changed how the team works. Productivity
+              is up, the space inspires creativity, and every client who walks in is
+              immediately impressed. Best investment we've made in the business."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=80"
+                alt="Portrait of Marcus Webb"
+                loading="lazy"
+              />
+              <div>
+                <span class="author-name">Marcus Webb</span>
+                <span class="author-role">CEO, Horizon Ventures</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="testimonial-card" role="article">
+            <div class="testimonial-quote-icon" aria-hidden="true">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              "I was nervous about the renovation, but the Lumière team made every
+              step easy. They were transparent about costs, delivered on time, and the
+              finished kitchen is absolutely stunning. I cook every single day now!"
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=80&h=80&q=80"
+                alt="Portrait of Amara Osei"
+                loading="lazy"
+              />
+              <div>
+                <span class="author-name">Amara Osei</span>
+                <span class="author-role">Homeowner, London</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="testimonial-card" role="article">
+            <div class="testimonial-quote-icon" aria-hidden="true">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              "The bedroom suite they designed is a masterclass in calm luxury. Every
+              morning I wake up feeling like I'm in a five-star hotel. The attention
+              to light, texture and proportion is extraordinary."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=80&h=80&q=80"
+                alt="Portrait of James Harlow"
+                loading="lazy"
+              />
+              <div>
+                <span class="author-name">James Harlow</span>
+                <span class="author-role">Private Client, New York</span>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Slider controls -->
+      <div class="slider-controls" aria-label="Testimonial navigation">
+        <button class="slider-btn prev" id="sliderPrev" aria-label="Previous testimonial">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="slider-dots" id="sliderDots" role="list"></div>
+        <button class="slider-btn next" id="sliderNext" aria-label="Next testimonial">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       ENQUIRY / CONTACT FORM SECTION
+  ═══════════════════════════════════ -->
+  <section class="contact section-pad" id="contact" aria-label="Contact and enquiry">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info fade-left">
+          <span class="section-eyebrow">Let's Connect</span>
+          <h2 class="section-heading">Start Your <em>Dream Project</em></h2>
+          <p class="contact-desc">
+            Ready to transform your space? Share a few details and we'll be in touch
+            within 24 hours to arrange your complimentary consultation.
+          </p>
+
+          <ul class="contact-details" role="list">
+            <li>
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <div>
+                <strong>Studio</strong>
+                <span>12 Rue de Lumière, Paris 75008</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt" aria-hidden="true"></i>
+              <div>
+                <strong>Call Us</strong>
+                <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:hello@lumiereinteriors.com">hello@lumiereinteriors.com</a>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-clock" aria-hidden="true"></i>
+              <div>
+                <strong>Hours</strong>
+                <span>Mon–Fri 9am–7pm · Sat 10am–4pm</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-form-wrap fade-right">
+          <form
+            id="enquiryForm"
+            class="enquiry-form"
+            novalidate
+            aria-label="Enquiry form"
+          >
+            <!-- FormSubmit honeypot (anti-spam) -->
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Sophia Renault"
+                  required
+                  autocomplete="name"
+                  aria-required="true"
+                />
+                <span class="form-error" id="nameError" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="sophia@example.com"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                />
+                <span class="form-error" id="emailError" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-input"
+                  placeholder="+33 6 00 00 00 00"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="service" class="form-label">Service Interested In</label>
+                <select id="service" name="service" class="form-input form-select">
+                  <option value="" disabled selected>Select a service…</option>
+                  <option value="residential">Residential Design</option>
+                  <option value="commercial">Commercial Interior</option>
+                  <option value="space-planning">Space Planning</option>
+                  <option value="renovation">Renovation Consultation</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message <span aria-hidden="true">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-input form-textarea"
+                placeholder="Tell us about your project — space type, size, style preferences, timeline…"
+                rows="5"
+                required
+                aria-required="true"
+              ></textarea>
+              <span class="form-error" id="messageError" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-text">Send Enquiry</span>
+              <span class="btn-loader" aria-hidden="true">
+                <i class="fas fa-circle-notch fa-spin"></i>
+              </span>
+            </button>
+
+          </form>
+
+          <!-- Success / Error notifications -->
+          <div class="form-notification success" id="formSuccess" role="alert" aria-live="polite" hidden>
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>Thank you!</strong> Your enquiry has been sent. We'll be in touch within 24 hours.
+            </div>
+          </div>
+          <div class="form-notification error" id="formError" role="alert" aria-live="polite" hidden>
+            <i class="fas fa-exclamation-circle"></i>
+            <div>
+              <strong>Something went wrong.</strong> Please try again or email us directly.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo" aria-label="Lumière Interiors">
+            <span class="logo-icon">✦</span>
+            <span>Lumière</span>
+          </a>
+          <p class="footer-tagline">
+            Crafting interiors of enduring beauty and function since 2012.
+          </p>
+          <div class="footer-social" role="list" aria-label="Social media links">
+            <a href="#" class="social-link" role="listitem" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" role="listitem" aria-label="Pinterest">
+              <i class="fab fa-pinterest-p"></i>
+            </a>
+            <a href="#" class="social-link" role="listitem" aria-label="Houzz">
+              <i class="fab fa-houzz"></i>
+            </a>
+            <a href="#" class="social-link" role="listitem" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul role="list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav">
+          <h4 class="footer-heading">Services</h4>
+          <ul role="list">
+            <li><a href="#services">Residential Design</a></li>
+            <li><a href="#services">Commercial Interior</a></li>
+            <li><a href="#services">Space Planning</a></li>
+            <li><a href="#services">Renovation Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="footer-heading">Contact</h4>
+          <address style="font-style: normal;">
+            <p><i class="fas fa-map-marker-alt"></i> 12 Rue de Lumière, Paris 75008</p>
+            <p><i class="fas fa-phone-alt"></i> <a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:hello@lumiereinteriors.com">hello@lumiereinteriors.com</a></p>
+          </address>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear"></span> Lumière Interiors. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════
+       LIGHTBOX MODAL
+  ═══════════════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImg" />
+      <div class="lightbox-caption">
+        <span id="lightboxCat"></span>
+        <h3 id="lightboxTitle"></h3>
+      </div>
+    </div>
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+
+
+  <!-- ═══════════════════════════════════
+       FLOATING BUTTONS
+  ═══════════════════════════════════ -->
+  <a
+    href="https://wa.me/33123456789?text=Hello%20Lumi%C3%A8re%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
