@@ -18,7 +18,6 @@
 
 ## Screenshot
 
-<!-- Replace with an actual screenshot once the site is live -->
 ![Screenshot](screenshot.png)
 
 ## About
