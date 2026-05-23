@@ -1,34 +1,136 @@
-# Atelier – Summary
+<div align="center">
 
-This is a luxury interior design studio landing page built with pure **HTML, CSS, and vanilla JavaScript** — no frameworks, no build step. Here are the key highlights:
+# Lumière Interiors
 
-## Core Features
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES2020-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Font Awesome](https://img.shields.io/badge/Font_Awesome-6-528DD7?logo=fontawesome&logoColor=white)](https://fontawesome.com/)
+[![FormSubmit](https://img.shields.io/badge/FormSubmit.co-Form_API-4CAF50)](https://formsubmit.co/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live-222222?logo=github)](https://pages.github.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
-**Visual & Layout**
-- Full-screen hero with animated headline, parallax image zoom, and a glassmorphism stats bar (350+ projects, 12 years, 98% satisfaction)
-- Alternating section backgrounds (cream / warm beige) maintain rhythm across six content sections
-- CSS custom properties drive every color, font, radius, shadow, and spacing value for the entire design system
+**A luxury interior design studio landing page — no frameworks, no build step. Pure HTML, CSS, and vanilla JavaScript with dark-mode, scroll animations, a filterable portfolio gallery with lightbox, and a live enquiry form.**
 
-**Portfolio & Gallery**
-- Filterable image grid across four categories: Living Room, Bedroom, Office, Kitchen
-- Hover overlays reveal project title and category with a smooth gradient lift
-- Lightbox with keyboard navigation (← → Esc) and touch swipe; only cycles currently-visible (filtered) items
+🌐 **Live site:** https://hojianfeng.github.io/Atelier/
 
-**Testimonials**
-- Auto-playing carousel at 5 000 ms intervals with dot indicators
-- Pauses on hover, supports touch swipe on mobile
+</div>
 
-**Enquiry Form**
-- Client-side validation on name, email, and message before submission
-- Submits via `fetch()` to FormSubmit.co with loading state, success notification, and error fallback
-- Honeypot field for spam protection
+## Screenshot
 
-**UI Enhancements**
-- Dark / light mode toggle persisted to `localStorage`
-- Animated statistics counter using eased `requestAnimationFrame` on hero intersection
-- Scroll-triggered fade-up / fade-left / fade-right animations via `IntersectionObserver`
-- Floating WhatsApp button and back-to-top button
-- Sticky transparent navbar that frosts on scroll
+<!-- Replace with an actual screenshot once the site is live -->
+![Screenshot](screenshot.png)
 
-**Technical Stack**
-HTML5, CSS3 (custom properties, grid, clamp), vanilla JavaScript (ES2020+), Font Awesome 6, Google Fonts (Playfair Display + Inter), FormSubmit.co.
+## About
+
+Lumière Interiors is a single-page marketing site for a luxury interior design studio. Every visual detail — the gold accent palette (`#C9A96E`), the glassmorphism hero stats bar, the parallax image zoom — is designed to communicate high-end craft.
+
+The entire design system is driven by CSS custom properties so a rebrand is a one-line change. Dark mode is persisted to `localStorage` and toggled without a flash. Scroll-triggered animations (`fade-up`, `fade-left`, `fade-right`) use a single `IntersectionObserver` with staggered CSS delays. The portfolio filter and lightbox share a live item list so previous/next navigation always cycles only the currently-visible category.
+
+No jQuery, no framework, no bundler. Open `index.html` and it works.
+
+## Key Features
+
+### Portfolio & Lightbox
+- Filterable grid across four categories (Living Room, Bedroom, Office, Kitchen)
+- Hover overlays reveal project title and category with a gradient lift effect
+- Lightbox with keyboard navigation (← → Esc) and touch-swipe support
+- Lightbox item list rebuilt from visible items on every filter change
+
+### Testimonials Slider
+- Auto-advancing carousel at 5 000 ms intervals with dot indicators
+- Pauses on `mouseenter`, resumes on `mouseleave` and manual navigation
+- CSS `translateX` driven — no JS animation loop
+
+### Scroll Animations
+- `fade-up`, `fade-left`, `fade-right` classes — invisible and off-axis by default
+- Single `IntersectionObserver` adds `.visible` when element enters viewport
+- Staggered delays via inline `--delay` CSS custom property
+
+### Enquiry Form
+- Client-side validation on name, email, and message
+- POSTs JSON to FormSubmit.co via `fetch()` with loading state, success banner, and error fallback
+- Honeypot field (`_honey`) for spam protection; `_captcha: false` suppresses reCAPTCHA
+
+### UI Polish
+- Dark / light mode toggle persisted to `localStorage`, zero flash on load
+- Sticky frosted-glass navbar (backdrop-filter on scroll)
+- Animated statistics counter (eased `requestAnimationFrame`) in the hero section
+- Floating WhatsApp button and back-to-top button at z-index 800
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Markup** | HTML5 (semantic sectioning elements) |
+| **Styling** | CSS3 — custom properties, Grid, Flexbox, `clamp()` |
+| **Behaviour** | Vanilla JavaScript ES2020+ (no framework, no jQuery) |
+| **Icons** | Font Awesome 6 (CDN) |
+| **Fonts** | Google Fonts — Playfair Display + Inter |
+| **Form backend** | FormSubmit.co (no server required) |
+| **Hosting** | GitHub Pages via GitHub Actions |
+
+## Architecture
+
+Three files, no build step:
+
+| File | Role |
+|------|------|
+| `index.html` | All markup. Sections in DOM order: navbar → hero → about → services → portfolio → testimonials → contact → footer → lightbox modal (hidden) → floating buttons. |
+| `style.css` | All styles. Organized top-to-bottom matching section order. CSS custom properties drive every color, font, spacing, and shadow. |
+| `script.js` | All behaviour, wrapped in a single `DOMContentLoaded` listener. `$`/`$$` micro-helpers replace jQuery. |
+
+### Theming system
+All colors are CSS custom properties on `:root` (light) and `[data-theme="dark"]`. The `data-theme` attribute lives on `<html>`. Gold accent `--clr-primary: #C9A96E` is the brand color used for highlights, icons, and CTAs.
+
+### z-index layers
+navbar 900 → mobile overlay 1000 → lightbox backdrop 1100 → lightbox 1200 → lightbox controls 1300. Floating buttons at 800.
+
+## Quick Start
+
+No installation required.
+
+```bash
+# Open directly in your default browser
+open index.html
+
+# Force a specific browser
+open -a "Google Chrome" index.html
+
+# Serve locally (recommended for testing the enquiry form — avoids fetch() CORS issues on file://)
+python3 -m http.server 8080
+# then visit http://localhost:8080
+```
+
+### Enquiry form note
+FormSubmit.co requires a **one-time email confirmation** on the very first submission before it delivers messages. Check the inbox for the configured recipient email after the first test submission.
+
+## Deployment
+
+The site deploys automatically to GitHub Pages on every push to `main` via `.github/workflows/deploy.yml`.
+
+To deploy manually:
+1. Push to `main` — the workflow triggers automatically.
+2. After the first push, enable GitHub Pages in **Settings → Pages → Source: GitHub Actions**.
+3. The live URL will be `https://hojianfeng.github.io/Atelier/`.
+
+## Adding Content
+
+### New portfolio item
+Copy an existing `.portfolio-item` div in `index.html`. Set `data-category` to one of `living-room`, `bedroom`, `office`, `kitchen`. Update `src`, `alt`, `.portfolio-cat`, and `.portfolio-title`. The filter and lightbox pick it up automatically — no JS changes needed.
+
+### New section
+Give it a unique `id` matching a `href="#id"` in the navbar. Use `.section-eyebrow` + `.section-heading` + `.section-sub` for consistent heading typography.
+
+### New color
+Always add a CSS custom property in `:root` (and a `[data-theme="dark"]` override if needed). Never use a hard-coded hex value outside the variable declaration.
+
+## Security Notes
+
+- **No secrets in the repo** — the FormSubmit recipient email is a public-facing contact address, not a credential.
+- **Spam protection** — the enquiry form includes a honeypot field (`name="_honey"`) and submits with `_captcha: false` to suppress reCAPTCHA while still blocking bots.
+- **No server-side code** — there is no backend, no database, and no authentication surface. The attack surface is limited to the static HTML/CSS/JS served over GitHub Pages.
+
+## License
+
+MIT
