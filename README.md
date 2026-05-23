@@ -10,7 +10,7 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live-222222?logo=github)](https://pages.github.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
-**A luxury interior design studio landing page — no frameworks, no build step. Pure HTML, CSS, and vanilla JavaScript with dark-mode, scroll animations, a filterable portfolio gallery with lightbox, and a live enquiry form.**
+**An Oriental interior design studio landing page — no frameworks, no build step. Pure HTML, CSS, and vanilla JavaScript with a Zen wabi-sabi aesthetic, dark-mode, scroll animations, a filterable portfolio gallery with lightbox, and a live enquiry form.**
 
 🌐 **Live site:** https://hojianfeng.github.io/Atelier/
 
@@ -22,17 +22,26 @@
 
 ## About
 
-Lumière Interiors is a single-page marketing site for a luxury interior design studio. Every visual detail — the gold accent palette (`#C9A96E`), the glassmorphism hero stats bar, the parallax image zoom — is designed to communicate high-end craft.
+Lumière Interiors is a single-page marketing site for an Oriental interior design studio specialising in Zen, wabi-sabi, and East Asian aesthetics. Every visual decision — the rice-paper warm palette, the Cormorant Garamond calligraphic headings, the staggered wabi-sabi portfolio grid, the slow 0.9 s sine-eased scroll reveals — is designed to feel like stepping into a curated, serene showroom.
 
-The entire design system is driven by CSS custom properties so a rebrand is a one-line change. Dark mode is persisted to `localStorage` and toggled without a flash. Scroll-triggered animations (`fade-up`, `fade-left`, `fade-right`) use a single `IntersectionObserver` with staggered CSS delays. The portfolio filter and lightbox share a live item list so previous/next navigation always cycles only the currently-visible category.
+The entire design system is driven by CSS custom properties so a rebrand is a one-line change. Dark mode shifts backgrounds to deep teak/charcoal and is persisted to `localStorage` with zero flash. Scroll-triggered animations (`fade-up`, `fade-left`, `fade-right`) use a single `IntersectionObserver` with staggered CSS delays. The portfolio filter and lightbox share a live item list so previous/next navigation always cycles only the currently-visible category.
 
 No jQuery, no framework, no bundler. Open `index.html` and it works.
 
 ## Key Features
 
+### Oriental Zen Design System
+- Rice-paper warm palette (`--clr-paper: #F5F0E8`, `--clr-linen: #EDE5D5`, `--clr-teak: #5A3E2B`) driven entirely by CSS custom properties
+- Cormorant Garamond display serif + Lora body + Josefin Sans UI labels — three-level type hierarchy with calligraphic character
+- Nearly-flat border-radius (2–6 px) and warm `rgba(44,32,22,…)` shadows throughout — no cool grey or glassy morphism
+- Fixed SVG fractalNoise paper texture overlay at 3.5% opacity for tactile depth
+- Slow 0.9 s `cubic-bezier(0.25, 0.46, 0.45, 0.94)` scroll reveals — incense-smoke pacing
+
 ### Portfolio & Lightbox
 - Filterable grid across four categories (Living Room, Bedroom, Office, Kitchen)
-- Hover overlays reveal project title and category with a gradient lift effect
+- Staggered aspect ratios (4/5 → 4/3 → 3/4) between grid items for wabi-sabi variation
+- Tab-style filter bar with bottom-border active indicator (not pills)
+- Hover overlays reveal project title and category with a warm gradient lift
 - Lightbox with keyboard navigation (← → Esc) and touch-swipe support
 - Lightbox item list rebuilt from visible items on every filter change
 
@@ -65,7 +74,7 @@ No jQuery, no framework, no bundler. Open `index.html` and it works.
 | **Styling** | CSS3 — custom properties, Grid, Flexbox, `clamp()` |
 | **Behaviour** | Vanilla JavaScript ES2020+ (no framework, no jQuery) |
 | **Icons** | Font Awesome 6 (CDN) |
-| **Fonts** | Google Fonts — Playfair Display + Inter |
+| **Fonts** | Google Fonts — Cormorant Garamond + Lora + Josefin Sans |
 | **Form backend** | FormSubmit.co (no server required) |
 | **Hosting** | GitHub Pages via GitHub Actions |
 
@@ -80,7 +89,7 @@ Three files, no build step:
 | `script.js` | All behaviour, wrapped in a single `DOMContentLoaded` listener. `$`/`$$` micro-helpers replace jQuery. |
 
 ### Theming system
-All colors are CSS custom properties on `:root` (light) and `[data-theme="dark"]`. The `data-theme` attribute lives on `<html>`. Gold accent `--clr-primary: #C9A96E` is the brand color used for highlights, icons, and CTAs.
+All colors are CSS custom properties on `:root` (light) and `[data-theme="dark"]`. The `data-theme` attribute lives on `<html>`. The Oriental palette introduces semantic tokens (`--clr-paper`, `--clr-linen`, `--clr-teak`, `--clr-bark`, `--clr-ink`) mapped to legacy names for backward compatibility. Gold accent `--clr-gold: #C9A96E` is used sparingly — Shibui principle.
 
 ### z-index layers
 navbar 900 → mobile overlay 1000 → lightbox backdrop 1100 → lightbox 1200 → lightbox controls 1300. Floating buttons at 800.
@@ -108,10 +117,9 @@ FormSubmit.co requires a **one-time email confirmation** on the very first submi
 
 The site deploys automatically to GitHub Pages on every push to `main` via `.github/workflows/deploy.yml`.
 
-To deploy manually:
 1. Push to `main` — the workflow triggers automatically.
 2. After the first push, enable GitHub Pages in **Settings → Pages → Source: GitHub Actions**.
-3. The live URL will be `https://hojianfeng.github.io/Atelier/`.
+3. The live URL is `https://hojianfeng.github.io/Atelier/`.
 
 ## Adding Content
 
@@ -122,7 +130,7 @@ Copy an existing `.portfolio-item` div in `index.html`. Set `data-category` to o
 Give it a unique `id` matching a `href="#id"` in the navbar. Use `.section-eyebrow` + `.section-heading` + `.section-sub` for consistent heading typography.
 
 ### New color
-Always add a CSS custom property in `:root` (and a `[data-theme="dark"]` override if needed). Never use a hard-coded hex value outside the variable declaration.
+Always add a CSS custom property in `:root` (and a `[data-theme="dark"]` override directly below the component styles — never in the variable block at the top). Never use a hard-coded hex value outside the variable declaration.
 
 ## Security Notes
 
